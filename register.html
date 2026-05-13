@@ -1,0 +1,80 @@
+<html>
+<head>
+  <title>Daftar - Rumah Makan APIN</title>
+  <link rel="stylesheet" href="website.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="warung-apin.png" class="banner">
+</div>
+
+<div class="navbar">
+  <a href="website.html"><i class="fas fa-home"></i> Home</a>
+  <div class="menu">
+    <button><i class="fas fa-fire"></i> Ayam Bakar</button>
+    <div class="submenu">
+      <a href="ayam-bakar-kecap.html">Bumbu Kecap</a>
+      <a href="ayam-bakar-rujak.html">Bumbu Rujak</a>
+    </div>
+  </div>
+  <div class="menu">
+    <button><i class="fas fa-drumstick-bite"></i> Ayam Goreng</button>
+    <div class="submenu">
+      <a href="ayam-goreng-tepung.html">Goreng Tepung</a>
+      <a href="ayam-goreng-kampung.html">Goreng Kampung</a>
+    </div>
+  </div>
+  <div class="menu">
+    <button><i class="fas fa-star"></i> Menu SEDA</button>
+    <div class="submenu">
+      <a href="menu-seda-ayam.html">Nasi SEDA Ayam</a>
+      <a href="menu-seda-ikan.html">Nasi SEDA Ikan</a>
+    </div>
+  </div>
+  <div class="menu">
+    <button><i class="fas fa-bowl-food"></i> Sup &amp; Soto</button>
+    <div class="submenu">
+      <a href="sup-ayam.html">Sup Ayam</a>
+      <a href="soto-medan.html">Soto Medan</a>
+    </div>
+  </div>
+  <div class="menu">
+    <button><i class="fas fa-glass-water"></i> Minuman</button>
+    <div class="submenu">
+      <a href="minuman-teh.html">Teh &amp; Kopi</a>
+      <a href="minuman-jus.html">Jus &amp; Jeruk</a>
+    </div>
+  </div>
+  <div class="nav-kanan">
+    <div class="nav-cart"><i class="fas fa-shopping-cart"></i><span class="cart-angka">0</span></div>
+    <a href="register.html" class="nav-daftar">Daftar</a>
+  </div>
+</div>
+
+<div class="form-box">
+  <h2><i class="fas fa-user-plus" style="color:#D32F2F"></i> Daftar Akun Baru</h2>
+  <label>Nama Lengkap</label>
+  <input type="text" id="nama" placeholder="Masukkan nama lengkap">
+  <label>Jenis Kelamin</label>
+  <div class="radio-group">
+    <label><input type="radio" name="gender" value="Laki-laki"> Laki-laki</label>
+    <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+  </div>
+  <label>Email</label>
+  <input type="email" id="email" placeholder="contoh@email.com">
+  <label>Password</label>
+  <input type="password" id="password" placeholder="Minimal 6 karakter">
+  <label style="font-weight:normal;margin-top:14px"><input type="checkbox" id="setuju"> Saya setuju dengan syarat dan ketentuan</label>
+  <button id="tampilkanBTN" class="btn-daftar-aksi"><i class="fas fa-check-circle"></i> Daftar Sekarang</button>
+  <div id="hasil"></div>
+</div>
+
+<div class="footer">
+  <p>&copy; 2026 Rumah Makan APIN. Semua hak dilindungi.</p>
+</div>
+
+<script src="website.js"></script>
+</body>
+</html>

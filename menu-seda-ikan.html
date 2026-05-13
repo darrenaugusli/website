@@ -1,0 +1,126 @@
+<html>
+<head>
+  <title>Nasi SEDA Ikan - Rumah Makan APIN</title>
+  <link rel="stylesheet" href="website.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="warung-apin.png" class="banner">
+</div>
+
+<div class="navbar">
+  <a href="website.html"><i class="fas fa-home"></i> Home</a>
+  <div class="menu">
+    <button><i class="fas fa-fire"></i> Ayam Bakar</button>
+    <div class="submenu">
+      <a href="ayam-bakar-kecap.html">Bumbu Kecap</a>
+      <a href="ayam-bakar-rujak.html">Bumbu Rujak</a>
+    </div>
+  </div>
+  <div class="menu">
+    <button><i class="fas fa-drumstick-bite"></i> Ayam Goreng</button>
+    <div class="submenu">
+      <a href="ayam-goreng-tepung.html">Goreng Tepung</a>
+      <a href="ayam-goreng-kampung.html">Goreng Kampung</a>
+    </div>
+  </div>
+  <div class="menu">
+    <button><i class="fas fa-star"></i> Menu SEDA</button>
+    <div class="submenu">
+      <a href="menu-seda-ayam.html">Nasi SEDA Ayam</a>
+      <a href="menu-seda-ikan.html">Nasi SEDA Ikan</a>
+    </div>
+  </div>
+  <div class="menu">
+    <button><i class="fas fa-bowl-food"></i> Sup &amp; Soto</button>
+    <div class="submenu">
+      <a href="sup-ayam.html">Sup Ayam</a>
+      <a href="soto-medan.html">Soto Medan</a>
+    </div>
+  </div>
+  <div class="menu">
+    <button><i class="fas fa-glass-water"></i> Minuman</button>
+    <div class="submenu">
+      <a href="minuman-teh.html">Teh &amp; Kopi</a>
+      <a href="minuman-jus.html">Jus &amp; Jeruk</a>
+    </div>
+  </div>
+  <div class="nav-kanan">
+    <div class="nav-cart" onclick="bukaKeranjang()"><i class="fas fa-shopping-cart"></i><span class="cart-angka">0</span></div>
+    <a href="register.html" class="nav-daftar">Daftar</a>
+  </div>
+</div>
+
+<h2 class="judul-menu"><i class="fas fa-star"></i> Nasi SEDA Ikan</h2>
+<div class="sub-tabs">
+  <a href="menu-seda-ayam.html" class="sub-tab">Nasi SEDA Ayam</a>
+  <a href="menu-seda-ikan.html" class="sub-tab sub-tab-aktif">Nasi SEDA Ikan</a>
+</div>
+<div class="grid">
+  <div class="card">
+    <img src="https://picsum.photos/seed/nsi1/400/300">
+    <div class="card-info">
+      <p class="nama-makanan">Nasi SEDA Ikan Bakar</p>
+      <p class="harga">Rp 32.000</p>
+      <button class="btn-pesan" onclick="tambahKeranjang('Nasi SEDA Ikan Bakar', 32000, 'https://picsum.photos/seed/nsi1/400/300')"><i class="fas fa-plus"></i> Pesan</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://picsum.photos/seed/nsi2/400/300">
+    <div class="card-info">
+      <p class="nama-makanan">Nasi SEDA Ikan Goreng</p>\
+      <p class="harga">Rp 30.000</p>
+      <button class="btn-pesan" onclick="tambahKeranjang('Nasi SEDA Ikan Goreng', 30000, 'https://picsum.photos/seed/nsi2/400/300')"><i class="fas fa-plus"></i> Pesan</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://picsum.photos/seed/nsi3/400/300">
+    <div class="card-info">
+      <p class="nama-makanan">Nasi SEDA Ikan Asam Manis</p>
+      <p class="harga">Rp 33.000</p>
+      <button class="btn-pesan" onclick="tambahKeranjang('Nasi SEDA Ikan Asam Manis', 33000, 'https://picsum.photos/seed/nsi3/400/300')"><i class="fas fa-plus"></i> Pesan</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://picsum.photos/seed/nsi4/400/300">
+    <div class="card-info">
+      <p class="nama-makanan">Nasi SEDA Ikan Pede</p>
+      <p class="harga">Rp 31.000</p>
+      <button class="btn-pesan" onclick="tambahKeranjang('Nasi SEDA Ikan Pede', 31000, 'https://picsum.photos/seed/nsi4/400/300')"><i class="fas fa-plus"></i> Pesan</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://picsum.photos/seed/nsi5/400/300">
+    <div class="card-info">
+      <p class="nama-makanan">Nasi SEDA Ikan Sambal</p>
+      <p class="harga">Rp 31.000</p>
+      <button class="btn-pesan" onclick="tambahKeranjang('Nasi SEDA Ikan Sambal', 31000, 'https://picsum.photos/seed/nsi5/400/300')"><i class="fas fa-plus"></i> Pesan</button>
+    </div>
+  </div>
+</div>
+
+<div class="footer"><p>&copy; 2026 Rumah Makan APIN. Semua hak dilindungi.</p></div>
+<div id="toast" class="toast"></div>
+
+<div id="popup-keranjang" class="popup-keranjang">
+  <div class="keranjang-box">
+    <div class="keranjang-header">
+      <h2><i class="fas fa-shopping-cart"></i> Keranjang</h2>
+      <button class="keranjang-tutup" onclick="tutupKeranjang()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="keranjang-list" id="daftar-keranjang"></div>
+    <div class="keranjang-footer" id="footer-keranjang" style="display:none">
+      <div class="keranjang-footer-baris">
+        <span>Total</span>
+        <span id="total-harga">Rp 0</span>
+      </div>
+      <button class="btn-checkout" onclick="checkout()"><i class="fas fa-credit-card"></i> Checkout</button>
+    </div>
+  </div>
+</div>
+
+<script src="website.js"></script>
+</body>
+</html>
